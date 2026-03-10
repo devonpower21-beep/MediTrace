@@ -1,0 +1,13 @@
+flask
+pymongo
+# sdv # Removing SDV from inference container (it's heavy and only needed for lab_setup)
+# pycaret # PyCaret is huge. If we pickle the model with sklearn, we might only need sklearn.
+# However, if the model is a PyCaret object, we need PyCaret.
+# Red Team advice: "Loads model.pkl". If it's a raw sklearn model, we just need sklearn.
+# The lab_setup.py saved a raw RandomForestClassifier (sklearn).
+# So we can DROP pycaret from runtime! Huge win for RAM.
+scikit-learn
+pandas
+numpy
+urllib3<2.0.0
+scikit-learn

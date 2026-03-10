@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+/* 
+ * MediTrace Design System
+ * A high-end medical application color palette
+ * Inspired by modern healthcare interfaces
+ */
+
+:root {
+  /* Primary Medical Palette */
+  --medical-primary: #0891b2;
+  /* Teal-500 - Trust, healing */
+  --medical-primary-dark: #0e7490;
+  /* Teal-600 */
+  --medical-primary-light: #22d3ee;
+  /* Cyan-400 */
+
+  /* Secondary Accents */
+  --medical-success: #059669;
+  /* Emerald-600 - Verified, safe */
+  --medical-warning: #d97706;
+  /* Amber-600 - Caution */
+  --medical-danger: #dc2626;
+  /* Red-600 - Risk, alert */
+
+  /* Neutral Medical Palette */
+  --medical-bg: #f8fafc;
+  /* Slate-50 - Clean background */
+  --medical-surface: #ffffff;
+  /* Pure white surfaces */
+  --medical-border: #e2e8f0;
+  /* Slate-200 */
+  --medical-text: #0f172a;
+  /* Slate-900 */
+  --medical-text-muted: #64748b;
+  /* Slate-500 */
+
+  /* Subtle Gradients */
+  --gradient-primary: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Base Styles */
+body {
+  background: var(--medical-bg);
+  color: var(--medical-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern Card System */
+.medical-card {
+  background: var(--medical-surface);
+  border: 1px solid var(--medical-border);
+  border-radius: 16px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.medical-card:hover {
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+/* Primary Button */
+.btn-medical {
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(8, 145, 178, 0.35);
+}
+
+.btn-medical:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(8, 145, 178, 0.45);
+}
+
+.btn-medical:active {
+  transform: translateY(0);
+}
+
+.btn-medical:disabled {
+  background: #cbd5e1;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Status Badges */
+.badge-success {
+  background: rgba(5, 150, 105, 0.1);
+  color: var(--medical-success);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-danger {
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--medical-danger);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* Custom Range Slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--medical-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(8, 145, 178, 0.4);
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Focus States for Accessibility */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--medical-primary);
+  outline-offset: 2px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

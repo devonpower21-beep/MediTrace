@@ -1,0 +1,54 @@
+# System
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+.venv
+
+# Docker
+docker-compose.override.yml
+
+# IDEs
+.vscode/
+.idea/
+
+# Vercel
+.vercel
+
+# Project Specific
+# We are currently TRACKING artifacts so that 'docker compose up' works out-of-the-box.
+# If you want to force users to run lab_setup.py, uncomment these:
+# ml-service/artifacts/training_data.csv
+# ml-service/artifacts/*.pkl
+# ml-service/artifacts/*.png
+<<<<<<< HEAD
+=======
+
+>>>>>>> a08b325 (Fix: Consolidate nested web repository into main repository)
+
+# Local DB Data
+mongo_data/
